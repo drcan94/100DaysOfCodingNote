@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- version control systems -->
+    <!-- cmd (cli) -> echo "content" > "filename" ile bir dosya oluşturuyoruz -->
+    <!-- örneğin -> "echo hello > cliFile.txt" -->
+    <!-- "type filename" ile de içeriği okuyoruz cmd de -->
+    <!-- del cliFile.txt ile siliyoruz dosyayı (bash de ise rm ile yapıyoruz) -->
+    <!-- mkdir ile klasör açıp rmdir ile klasör siliyoruz -->
+
+    <!-- git basics -->
+    <!-- commit -> code snapshot -->
+    <!-- branch -> where commits are stored -> main or master -->
+    <!-- proje klasöründe git init yazarak başlıyoruz -->
+    <!-- git status ile mevcut duruma bakıyoruz.. git add <filename> ile ekliyoruz.. sonra
+         git commit -m "something" ile de commit ediyoruz  
+         git config --global --edit ile credential'ları belirleyebiliriz (github için vs)
+         git config --global user.name "bla bla"
+         git config --global user.email "bla@bla.bla"
+         şeklinde de belirleyebiliriz
+         git branch -m master main ile de master olan 'branch name'i main yapabiliriz
+         git log ile de mevcut branch'daki tüm commitleri görebiliriz
+         "git checkout -b branch_name" ile yeni bir branch açabiliriz
+         "git checkout existing_branch" ile de mevcut bir branch'a switch edebiliriz
+         değişiklikleri commit ettiğimiz zaman o an hangi branch da isek 
+         oraya commitlemiş oluruz..
+         "git checkout main" ile main branch'a gidip orada merge edebiliriz.. bunun için 
+         "git merge otherBranchName" ile diğer branch ı main branch a merge edebiliriz
+         Farklı branchlarda aynı dosya üzerinde değişiklikler yapılırsa hangisini tercih edeceğimizi 
+         nasıl söyleriz git'e? follow me :) 
+         Bu bir merge conflict doğuracaktır
+         git merge otherBranchNameNeİse dediğimiz zaman iki değişiklik de dosyada görülür
+         VSC de dosyayı açınca seçenekeler çıkacaktır zaten. Incoming change i kabul edince 
+         en son değişiklik kabul edilir.. sonra bir commit atarak merge ettiğimizi de söyleriz
+         branch silme ve önceki commitlere dönme;
+         delete isimli bir branch oluşturup silelim -> git checkout -b delete
+                                                      -> birkaç değişiklik yapalım ve commitleyelim
+                                                      -> git reset --hard HEAD~1 dersek değişikler 
+                                                      kaybolur ve delete branch'ı ilk haline döner
+                                                      -> delete branch'ını silmek için önce başka branch a geçilmeli :)
+                                                         sonra da "git branch -D delete" ile silebiliriz,
+         "git add" ile eklenmeyen değişiklikler ise (unstaged changes) "git checkout -- ." komutu ile silinebilir. 
+         değişiklikleri commit etmeden branch değiştiremiyoruz zaten :)
+         peki git add dedik ama geri almak istiyoruz -> "git reset filename" and again "git checkout -- filename"
+
+        
+        Time to GitHub;
+        from local repositories to remote repositories
+
+
+    -->
+  </body>
+</html>

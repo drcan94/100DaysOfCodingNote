@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>CSS Box Model</title>
+  </head>
+  <body>
+    <!-- 
+        Displays;
+        Block (level) -> h1, div, p, li
+        Inline        -> a, span, button, img
+        Inline Block  -> 
+        
+        Inline elementlere margin padding işlemez
+        Inline block ise yeni satıra geçmez ama margin padding alabilir
+        
+        Margin Collapsing - in adjacent elements; Bitişik elementlerin margin değerlerinden 
+        küçük olan çöker, büyük olanın değeri görünür. dikey marginlerden biri etki 
+        etmez biz sadece bir margini görürüz.
+
+        box-shadow -> (sağa) (aşağı) (blur) (color)
+    -->
+
+    <!-- challenge -->
+    <!-- ileriki konularda işlenecek şeylerle yaptım ama :) -->
+    <div class="container">
+      <img class="image" src="./images/challenges-trophy.jpg" alt="">
+      <p class="title">Max's Challenge for <span class="date">Wednesday, August 4th</span></p>
+      <h1 class="content">
+        Learn about the basics of web development - specifically dive into HTML
+        & CSS
+      </h1>
+    </div>
+    <div class="explore">Explore the <a href="full.html" class="week">full week</a></div>
+    <!-- challenge -->
+
+  </body>
+</html>

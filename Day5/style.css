@@ -1,0 +1,48 @@
+.googleLink {
+    text-decoration: none;
+    color: #307ed8;
+    padding: 5px 9px;
+    border-radius: 10px;
+    background-color: #91eb7fe5;
+}
+
+.googleLink:hover {
+    color: #ffffff;
+    background-color: #307ed8;
+}
+
+#basics {
+    font-family: sans-serif;
+    text-align: center;
+    color: #db6666
+}
+
+#hello {
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.papatyaLine {
+    display: flex;
+    justify-content: center;
+}
+
+.papatyaContainer {
+    /* papatyayı çevreleyen bir relative container olmalı.. 
+    istediğimiz ölçeği belirtince artık resmin kestiğimiz 
+    kısmı görünecek şekşilde istediğimiz yere yerleştirebiliriz */
+    position: relative;
+    width: 308px;
+    height: 308px;
+}
+
+.papatyaPixabay {
+    position: absolute;
+    left: -190px;
+    top: -12px;
+    clip-path: circle(34.9% at 66% 49%);
+    /* aşağıdaki adreste istediğimiz resmin istediğimiz yerine focus olabiliriz */
+    /* https://www.cssportal.com/css-clip-path-generator/ */
+}

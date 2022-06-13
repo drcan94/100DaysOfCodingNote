@@ -1,0 +1,1 @@
+My notes about 100-days-of-web-development from Academind
