@@ -50,14 +50,16 @@
          değişiklikleri commit etmeden branch değiştiremiyoruz zaten :)
          peki git add dedik ama geri almak istiyoruz -> "git reset filename" and again "git checkout -- filename"
 
-        
+         
         Time to GitHub;
         from local repositories to remote repositories
-        init ve commit işlemleri bittiyse boş bir repo açıp aşağıdaki komutu giriyoruz
+        init ve commit işlemleri bittiyse github'da boş bir repo açıp cli'a aşağıdaki komutu giriyoruz
         git remote add origin "urlOfRepo.git"
         git push -u origin main (daha önce github ile giriş yapılmadıysa pop up açılır)
-
-
+        git remote "urlOfRepo.git" ile de klonlayabiliriz istediğimiz repoyu
+        birlikte çalışırken (collaboration) son güncel repoyu çekmek için "git pull" komutunu kullanırız
+        contribution için katkı yapacağımız repoyu forklamamız gerekiyor önce.. sonra klonlayıp değişiklikler
+        yapıp commitledikten sonra reposunu forkladığımız (owner) kişiye pull request atmamız gerekir github üzerinden
     -->
   </body>
 </html>
