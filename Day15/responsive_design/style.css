@@ -1,0 +1,288 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+
+/* !   %   -> percentage -> relative to parent element size                                    */
+/* ?   em  -> ephemeral unit -> relative to nearest element's font-size                        */
+/*     rem -> root ephemeral unit -> relative to root element (html)'s font-size               */
+
+/* *   z-index -> position verilmiş elementin z-order'ını belirtir */
+
+
+body {
+    font-family: "Open Sans", sans-serif;
+    background-color: rgb(44, 41, 38);
+    min-height: 100vh;
+    min-width: 100%;
+}
+
+header {
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(29, 26, 24);
+    padding: 0 20px;
+}
+
+
+
+header>a {
+    /* logo */
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(238, 164, 80);
+    text-transform: uppercase;
+}
+
+header ul {
+    display: flex;
+}
+
+header li {
+    margin: 0 1rem;
+}
+
+header li a {
+    color: rgb(185, 131, 31);
+    font-size: 1.25rem;
+}
+
+header li a:hover {
+    color: rgb(228, 163, 44)
+}
+
+/* .hamburger-icon {
+    display: none;
+} */
+
+.menu-btn {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 3rem;
+    height: 3rem;
+}
+
+.menu-btn span {
+    display: inline-block;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+}
+
+
+#side-drawer {
+    width: 100%;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(29, 26, 27);
+    display: none;
+
+}
+
+#side-drawer ul {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 100px;
+    min-height: calc(100vh - 5rem);
+    min-width: 100vw;
+    align-items: center;
+}
+
+#side-drawer li {
+    margin: 2.5rem 0;
+}
+
+#side-drawer ul a {
+    color: rgb(253, 239, 213);
+    font-size: 3rem;
+
+
+}
+
+#side-drawer header {
+    height: 5rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: rgb(29, 26, 24);
+    padding: 0 20px;
+}
+
+/* #full-menu {
+    position: absolute;
+    left: 0;
+    top: 5rem;
+    min-height: calc(100vh - 5rem);
+}
+
+#full-menu ul {
+    flex-direction: column;
+    padding: 50px 100px;
+    min-height: calc(100vh - 5rem);
+    min-width: calc(100vw);
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#full-menu li a {
+    font-size: 3rem;
+}
+
+.opened {
+    display: block;
+}
+
+.closed {
+    display: none;
+} */
+
+main h1 {
+    color: rgb(238, 164, 80);
+    font-size: 2.4rem;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+#latest-products {
+    width: 80%;
+    margin: 50px auto;
+}
+
+.food-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    justify-content: center;
+}
+
+
+.food-item {
+    background-color: rgb(228, 286, 182);
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.food-item img {
+    height: 15rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.food-item-content {
+    padding: .5rem 0 1rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 140px;
+    align-items: center;
+}
+
+.food-item-content h2 {
+    /* font-size: 100%; burada default font-size neyse onu vermiş olduk */
+    font-size: 1.2rem;
+    font-weight: bolder;
+    padding: 0 1em;
+    /* 1em demek burada 1.2 rem kadar demek */
+    text-align: center;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    background-color: rgb(228, 157, 44);
+    color: white;
+    border-radius: 5px;
+    padding: .4rem 1rem;
+    width: fit-content;
+}
+
+.btn:hover {
+    background-color: rgb(221, 134, 34);
+}
+
+/* media query'i ilgili element tanımlanmadan önce yazarsak anlamı kalmaz..
+    ! Remember cascading nature
+*/
+
+@media (max-width: 48rem) {
+    /* 768px = 48rem :) */
+
+    html {
+        font-size: 12px;
+    }
+
+    /* .hamburger-icon {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .hamburger-icon:hover {
+        cursor: pointer;
+    } */
+
+    /* .line {
+        width: 2.3rem;
+        height: 0.9px;
+        background-color: yellow;
+        margin: 4px 0;
+    } */
+    .menu-btn {
+        display: flex;
+    }
+
+    #side-drawer:target {
+        display: block;
+    }
+
+    main h1 {
+        font-size: 1.5rem;
+        margin: 2rem 0;
+    }
+
+    .food-items {
+        grid-template-columns: 1fr;
+    }
+
+    .food-item:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+
+
+    #latest-products {
+        margin: 24px auto
+    }
+
+    header nav {
+        display: none;
+    }
+
+    /* nav {
+        display: none;
+    } */
+
+    .food-item-content {
+        height: 100px;
+    }
+
+    .food-item-content h2 {
+        height: 50px;
+    }
+
+
+}

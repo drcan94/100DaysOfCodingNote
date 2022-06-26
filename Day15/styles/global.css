@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Quicksand", sans-serif;
+    font-size: 10px;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    /* flex-direction: column; */
+    /* default olarak row'dur */
+    /* column-reverse dersek vertical olarak yazdığımız sırayı tersine çevirir */
+    /* row-reverse dersek horizontal olarak yazdığımız sırayı tersine çevirir */
+    /* flex-wrap: wrap; */
+    /* default olarak nowrap'tir */
+    /* flex-flow: row nowrap;  */
+    /* default olarak bu şekilde.. ilk value flex-direction; ikincisi ise flex-wrap'e karşılık */
+    align-items: center;
+    width: 100%;
+    height: 85px;
+    justify-content: space-between;
+    padding: 15px;
+
+}
+
+.header-container ul {
+    width: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+}
+
+.header-container ul li {
+    width: 80px;
+    font-size: 2rem;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.header-container nav a {
+    color: rgb(255, 251, 0);
+    padding: 6px 10px;
+    text-shadow: 0 1px 1px rgb(0, 0, 0);
+    border-radius: 6px;
+}
+
+.header-container nav a:hover {
+    color: rgb(77, 77, 77);
+    background-color: rgb(255, 2555, 0);
+}
+
+.header-container #logo a {
+    padding: 0 10px;
+    /* inline elemente vertical padding işlemez */
+    font-family: "Oleo Script", sans-serif;
+    color: rgb(245, 243, 160);
+    font-size: 3rem;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 3px rgb(0, 0, 0);
+}
+
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    background: linear-gradient(70deg, #181818, #191d1d);
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+}
+
+footer ul li {
+    width: 50px;
+    height: 50px;
+    margin: 0 50px;
+}
+
+
+footer img {
+    width: 100%;
+    height: 100%;
+}

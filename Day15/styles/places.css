@@ -1,0 +1,145 @@
+body {
+    background: linear-gradient(30deg, rgb(77, 77, 77), rgb(58, 58, 58));
+    color: rgb(68, 68, 68)
+}
+
+main {
+    margin-top: 85px;
+}
+
+main ul {
+    display: grid;
+    width: 1200px;
+    margin: 0 auto 48px auto;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 20px;
+}
+
+
+
+main li {
+    display: flex;
+    background-color: white;
+    box-shadow: 3px 6px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+main li:nth-of-type(3) {
+    grid-column: 1 / span 2;
+}
+
+main li img {
+    width: 300px;
+    height: 280px;
+    object-fit: cover;
+}
+
+
+/* aşağıda flexbox ile kendime göre yaptığım bir düzenleme var */
+/* flexbox tek boyutludur.. yukarıda grid sistemle 2 boyutlu olarak düzenliyor hoca */
+
+/* main ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 85%;
+    margin: 0 auto;
+}
+
+
+
+main li {
+    display: flex;
+    max-width: 32%;
+    background-color: white;
+    box-shadow: 3px 6px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    overflow: hidden;
+    height: 200px;
+    margin-bottom: 10px;
+}
+
+main li img {
+    width: 160px;
+    object-fit: cover;
+}
+
+
+@media screen and (max-width: 1200px) {
+    main li {
+        max-width: 48%;
+    }
+    main ul {
+        width: 80%;
+    }
+
+    main li img {
+        width: 160px;
+    }
+
+}
+
+
+@media screen and (max-width: 830px) {
+    main ul {
+        width: 90%;
+        justify-content: center;
+    }
+
+    main li {
+        max-width: 90%;
+    }
+
+    main li img {
+        width: 180px;
+    }
+}
+ */
+
+
+.header-container #logo a {
+    color: rgb(183, 230, 235)
+}
+
+.header-container nav a:hover {
+    background-color: rgb(183, 230, 235);
+    color: rgb(59, 59, 59) ;
+}
+
+.item-content {
+    padding: 24px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.item-text h2 {
+    font-size: 2rem;
+}
+
+.item-text p {
+    font-size: 1.6rem;
+    max-height: 40px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.actions {
+    text-align: right;
+}
+
+.actions a {
+    font-size: 1.4rem;
+    font-weight: bolder;
+    padding: 6px;
+    color: rgb(22, 211, 228);
+    border-radius: 5px;
+    letter-spacing: 1px;
+}
+
+.actions a:hover {
+    background-color: rgb(77, 77, 77);
+    color: rgb(138, 225, 233);
+}
