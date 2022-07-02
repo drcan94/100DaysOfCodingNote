@@ -1,0 +1,54 @@
+body {
+  background-color: rgb(31, 30, 30);
+  font-family: 'Roboto', sans-serif;
+}
+
+form {
+  width: 30rem;
+  margin: 3rem auto;
+  background-color: rgb(255, 255, 255);
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+/* label a margin vermek için display block vermek yerine inputa yapmak daha az kod satırı demek hocam :) */
+
+input {
+  width: 100%;
+  display: block;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+  font: inherit;
+  border: 2px solid rgb(184, 184, 184);
+  padding: 0.25rem;
+  
+  outline: none;
+  /* outline verilmeden border-color işlemiyor focus olduğunda :) */
+
+  color: rgb(61, 58, 58);
+  border-radius: 10px;
+}
+
+input:focus {
+  background-color: rgb(236, 232, 241);
+  color: rgb(21, 2, 43);
+  border-color: rgb(181, 156, 209);
+}
+
+button {
+  display: block;
+  font: inherit;
+  /* inherit et dediğimiz zaman body'e verdiğimiz fontu al demektir.. yoksa kendi browser fontunu yapar */
+  background-color: rgb(32, 5, 63);
+  color: white;
+  border: 1px solid rgb(32, 5, 63);
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(52, 14, 95);
+  border-color: rgb(52, 14, 95);
+}

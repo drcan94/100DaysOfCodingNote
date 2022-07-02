@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms Challenge</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Contact Us</h1>
+    </header>
+    <main>
+      <form action="./index.html" method="GET">
+        <section>
+          <h2>How can we help you?</h2>
+          <ul>
+            <li>
+              <label for="name">Your Name</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                required
+              />
+            </li>
+            <li>
+              <label for="email">Your Email Address</label>
+              <input type="email" name="email" id="email" required />
+            </li>
+            <li>
+              <label class="phone" for="phone">Your Phone Number</label>
+              <input type="tel" name="phone" id="phone" pattern="[0-9]{10}" placeholder="1112223344" required />
+            </li>
+            <li>
+              <label for="message">Your message</label>
+              <textarea
+                id="message"
+                name="message"
+                required
+                rows="6"
+              ></textarea>
+            </li>
+            <li>
+              <label for="howfind">How did you find us?</label>
+              <select id="howfind" name="howfind">
+                <option value="web">Web Search</option>
+                <option value="mouth">Word of Mouth</option>
+                <option value="other">Other</option>
+              </select>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>How should we reply?</h2>
+          <ul>
+            <li class="d-flex">
+              <input
+                type="radio"
+                name="reply"
+                id="reply-call"
+                value="byCall"
+                required
+              />
+              <label for="reply-call">Call me</label>
+            </li>
+            <li class="d-flex">
+              <input
+                type="radio"
+                name="reply"
+                id="reply-email"
+                value="byEmail"
+                required
+              />
+              <label for="reply-email">Send me an email</label>
+            </li>
+            <li class="d-flex">
+              <input
+                type="radio"
+                name="reply"
+                id="reply-dont"
+                value="none"
+                required
+              />
+              <label for="reply-dont">Don't reply</label>
+            </li>
+          </ul>
+        </section>
+        <br>
+        <section>
+          <div class="form-control-inline">
+            <input type="checkbox" id="agree-terms" name="terms" required />
+            <label for="agree-terms">Accept terms</label>
+          </div>
+        </section>
+        <section class="d-flex right-side">
+          <button class="btn btn-light" type="reset">Clear</button>
+          <button class="btn btn-blue" type="submit">Submit</button>
+        </section>
+      </form>
+    </main>
+  </body>
+</html>

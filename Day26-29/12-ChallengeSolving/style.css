@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background-color: rgb(237, 249, 254);
+    font-family: sans-serif;
+}
+
+header h1 {
+    width: fit-content;
+    margin: 25px auto;
+}
+
+main form {
+    width: 30rem;
+    margin: 2rem auto;
+    background-color: #f5f8ff;
+    padding: 1rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px #cccfd4;
+}
+
+section {
+    margin-bottom: 1rem;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+
+ul li input,
+textarea,
+select {
+    font: inherit;
+    display: block;
+    width: 100%;
+    margin: 8px 0 10px 0;
+    border-radius: 5px;
+    border: 1px solid rgb(152, 159, 184);
+    padding: 8px 10px;
+}
+
+
+label {
+    color: #222b3d;
+}
+
+select {
+    padding-left: 5px;
+}
+
+textarea {
+    resize: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    background-color: rgb(217, 227, 247);
+}
+
+.d-flex {
+    display: flex;
+}
+
+.right-side {
+    justify-content: flex-end;
+}
+
+
+.d-flex label {
+    margin: 0;
+}
+
+
+input[type=radio] {
+    width: auto;
+    margin: 3.5px 0;
+    margin-right: 0.5rem;
+
+}
+
+
+.btn {
+    font: inherit;
+    border: 1.5px solid black;
+    padding: 4px 9px;
+    border-radius: 6px;
+    margin-left: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+
+.btn-light {
+    background-color: transparent;
+    color: rgb(51, 67, 100);
+}
+.btn-light:hover {
+    background-color: rgb(208, 215, 230);
+}
+
+.btn-blue {
+    background-color: rgb(51, 67, 100);
+    color: #f1efeb;
+}
+
+.btn-blue:hover {
+    background-color: rgb(69, 89, 129);
+    border-color:rgb(69, 89, 129); ;
+}

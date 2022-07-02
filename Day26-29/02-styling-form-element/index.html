@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Forms</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <form action="/" method="GET">
+      <!-- submit olduğunda hangi url'e ne isteği (HTTP Requests) atacağımızı belirtiyoruz -->
+      <input type="text" name="user-name" />
+      <!-- POST request meta data olarak gönderilir.. url'e yazılmaz -->
+      <!-- GET request; input ile alınan veri ilgili urle gidip name attr'üne verdiğimiz değeri key 
+        olarak alır ve veriyi value olarak yazdırılır submit olunca-->
+      <button>Submit</button>
+    </form>
+  </body>
+</html>

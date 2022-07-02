@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: "Open-Sans", sans-serif;
+    font-size: 1.6rem;
+    color: #2c292c;
+    background-color: #f7eff7;
+}
+
+#top-header {
+    background-color: rgb(140, 0, 255);
+    color: white;
+    padding: 3rem 5%;
+    text-align: center;
+}
+
+#top-header h1 {
+    margin-bottom: 3rem;
+}
+
+
+#top-header p {
+    margin: 1rem 0;
+}
+
+/* Buttons */
+
+.btn {
+    font: inherit;
+    padding: .8rem 1.8rem;
+    background-color: rgb(140, 0, 255);
+    color: white;
+    border: 1px solid rgb(140, 0, 255);
+    border-radius: .6rem;
+    cursor: pointer;
+}
+
+
+.btn-alt {
+    background-color: transparent;
+    border-color: transparent;
+    color: rgb(140, 0, 255);
+}
+
+.btn:hover {
+    background-color: rgb(79, 10, 190);
+    border-color: rgb(79, 10, 190);
+}
+
+.btn-alt:hover {
+    background-color: rgb(230, 201, 252);
+    border-color: transparent;
+}

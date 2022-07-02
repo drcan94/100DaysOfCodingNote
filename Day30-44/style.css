@@ -1,0 +1,38 @@
+body {
+    background-color: black;
+    color:aliceblue
+}
+
+a {
+    color: inherit;
+}
+
+.input-container {
+    display: flex;
+    margin: 20px 0;
+}
+
+.remaining-info {
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    font-size: .8rem;
+}
+
+.less-than-bg {
+    background-color: rgb(245, 175, 175);
+}
+
+input.error {
+    background-color: rgb(185, 27, 27) !important;
+
+}
+.less-than-text {
+    color: rgb(197, 95, 11);
+    font-weight: bold;   
+}
+
+
+span.error {
+    color: rgb(141, 33, 6) !important;
+}
