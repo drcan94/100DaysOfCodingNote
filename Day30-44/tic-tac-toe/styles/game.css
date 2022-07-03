@@ -18,7 +18,11 @@
 
 #game-over h2 {
     font-size: 3.4rem;
-    margin: 1rem 0;
+    margin: 1rem auto 2rem auto; 
+}
+
+#draw {
+    display: none;
 }
 
 #active-player-name {
@@ -32,8 +36,7 @@
     grid-template-columns: repeat(3, 9.6rem);
     grid-template-rows: repeat(3, 9.6rem);
     justify-content: center;
-    gap:8px
-
+    gap: 8px
 }
 
 #game-board li {
@@ -45,26 +48,26 @@
     align-items: center;
     font-size: 4rem;
     font-weight: bold;
-    color:rgb(47, 57, 85);
+    color: rgb(47, 57, 85);
 
 }
 
 #game-board li:hover {
     background-color: rgb(112, 13, 204);
-    color:rgb(235, 226, 226);
+    color: rgb(235, 226, 226);
 }
 
 #game-board li.disabled {
     background-color: rgb(112, 13, 204);
-    color:rgb(235, 226, 226);
+    color: rgb(235, 226, 226);
     cursor: default;
 }
 
 #players-warning {
     display: none;
-    margin:  15px auto;
+    margin: 15px auto;
     background-color: rgb(223, 67, 6);
-    color:white;
+    color: white;
     width: fit-content;
     font-weight: bold;
     border-radius: 10px;

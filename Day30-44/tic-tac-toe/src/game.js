@@ -12,6 +12,8 @@ const gameOverEl = document.getElementById("game-over");
 const winnerName = document.getElementById("winner-name");
 
 const switchPlayer = () => {
+  move++;
+
   activePlayer === 0 ? (activePlayer = 1) : (activePlayer = 0);
   activePlayerText.textContent = players[activePlayer].name;
 };
@@ -22,7 +24,6 @@ let isOver = false;
 let move = 0;
 
 const checkForGameOver = (data) => {
-  move++;
   // rows check
   data.forEach((row) => {
     if (row[0] > 0 && row[0] === row[1] && row[1] === row[2]) {
@@ -62,7 +63,7 @@ const checkForGameOver = (data) => {
   }
 
   move === 9 && (isOver = true);
-  console.log(move)
+  console.log(move);
 
   return winnerPlayer;
 };
@@ -72,7 +73,6 @@ let isStarted = false;
 export const newGameStarter = (e) => {
   if (!isOver) {
     if (players[0].name && players[1].name) {
-      console.log("isStart", isStarted);
       !isStarted && switchPlayer(); // initialState i değiştirir ama ismi de ekrana yazdırır.. ilk kim gelsin istiyorsak diğerini initial olarak atayabiliriz :)
       activeGame.style.display = "block";
 
@@ -120,15 +120,20 @@ export const selectGameField = (e) => {
   checkForGameOver(gameData);
   if (winnerPlayer === 1 || winnerPlayer === 2) {
     isOver = true;
+    move = 0;
+    document.getElementById("draw").style.display = "none";
+    gameOverEl.firstElementChild.style.display = "block";
     gameOverEl.style.display = "block";
     winnerName.textContent = players[winnerPlayer - 1].name;
     activePlayerText.parentElement.style.display = "none";
     newGameBtn.style.display = "inline-block";
 
     return;
-  } else if (move === 9) {
+  } else if (move === 9 && winnerPlayer === 0) {
+    move = 0;
     gameOverEl.style.display = "block";
-    gameOverEl.firstElementChild.textContent = "BERABERE!";
+    gameOverEl.firstElementChild.style.display = "none";
+    document.getElementById("draw").style.display = "block";
     activePlayerText.parentElement.style.display = "none";
     newGameBtn.style.display = "inline-block";
     return;
