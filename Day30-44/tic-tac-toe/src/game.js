@@ -105,8 +105,8 @@ export const newGameStarter = (e) => {
 export const showCurrentSymbol = (e) => {
   let elRow = e.target.dataset.row;
   let elCol = e.target.dataset.col;
-  if (gameData[elRow - 1][elCol - 1] > 0) {
-    // tıklanmışsa çalışmasın
+  if (gameData[elRow - 1][elCol - 1] > 0 || isOver) {
+    // tıklanmışsa veya oyun bittiyse çalışmasın
     return;
   }
   e.target.textContent = players[activePlayer].symbol;
@@ -115,8 +115,8 @@ export const showCurrentSymbol = (e) => {
 export const hideCurrentSymbol = (e) => {
   let elRow = e.target.dataset.row;
   let elCol = e.target.dataset.col;
-  if (gameData[elRow - 1][elCol - 1] > 0) {
-    // tıklanmışsa çalışmasın
+  if (gameData[elRow - 1][elCol - 1] > 0 || isOver) {
+    // tıklanmışsa veya oyun bittiyse çalışmasın
     return;
   }
   e.target.textContent = "";
@@ -150,6 +150,7 @@ export const selectGameField = (e) => {
     return;
   } else if (move === 9 && winnerPlayer === 0) {
     move = 0;
+    isOver = true;
     gameOverEl.style.display = "block";
     gameOverEl.firstElementChild.style.display = "none";
     document.getElementById("draw").style.display = "block";
