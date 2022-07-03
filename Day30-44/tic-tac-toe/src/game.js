@@ -5,23 +5,20 @@ import { gameFieldsElements } from "./index";
 
 const activeGame = document.getElementById("active-game");
 const activePlayerText = document.getElementById("active-player-name");
-let activePlayer = 1;
-
 const playersWarning = document.getElementById("players-warning");
 const gameOverEl = document.getElementById("game-over");
 const winnerName = document.getElementById("winner-name");
 
+let activePlayer = 1;
+let winnerPlayer = 0;
+let isOver = false;
+let move = 0;
+
 const switchPlayer = () => {
   move++;
-
   activePlayer === 0 ? (activePlayer = 1) : (activePlayer = 0);
   activePlayerText.textContent = players[activePlayer].name;
 };
-
-let winnerPlayer = 0;
-
-let isOver = false;
-let move = 0;
 
 const checkForGameOver = (data) => {
   // rows check
@@ -44,7 +41,7 @@ const checkForGameOver = (data) => {
     i++;
   });
 
-  //   top left to right bottom chech
+  //   top left to right bottom check
   if (
     data[0][0] > 0 &&
     data[0][0] === data[1][1] &&
@@ -53,7 +50,7 @@ const checkForGameOver = (data) => {
     winnerPlayer = data[1][1];
   }
 
-  //   bottom left to right top chech
+  //   bottom left to right top check
   if (
     data[2][0] > 0 &&
     data[2][0] === data[1][1] &&
@@ -105,19 +102,41 @@ export const newGameStarter = (e) => {
   }
 };
 
+export const showCurrentSymbol = (e) => {
+  let elRow = e.target.dataset.row;
+  let elCol = e.target.dataset.col;
+  if (gameData[elRow - 1][elCol - 1] > 0) {
+    // tıklanmışsa çalışmasın
+    return;
+  }
+  e.target.textContent = players[activePlayer].symbol;
+};
+
+export const hideCurrentSymbol = (e) => {
+  let elRow = e.target.dataset.row;
+  let elCol = e.target.dataset.col;
+  if (gameData[elRow - 1][elCol - 1] > 0) {
+    // tıklanmışsa çalışmasın
+    return;
+  }
+  e.target.textContent = "";
+};
+
 export const selectGameField = (e) => {
   const selectedEl = e.target;
   const selectedRow = +selectedEl.dataset.row;
   const selectedColumn = +selectedEl.dataset.col; // dataset["col"] da olur.. "-" yoksa kullanılabilir
   if (gameData[selectedRow - 1][selectedColumn - 1] > 0) {
-    // daha önce tıklandıysa hiçbir şey yapılmasın
+    // tıklanmışsa çalışmasın
     return;
   }
-  selectedEl.textContent = players[activePlayer].symbol;
-  selectedEl.classList.add("disabled");
-  gameData[selectedRow - 1][selectedColumn - 1] = activePlayer + 1;
 
-  checkForGameOver(gameData);
+  if (!isOver) {
+    selectedEl.textContent = players[activePlayer].symbol;
+    selectedEl.classList.add("disabled");
+    gameData[selectedRow - 1][selectedColumn - 1] = activePlayer + 1;
+    checkForGameOver(gameData);
+  }
   if (winnerPlayer === 1 || winnerPlayer === 2) {
     isOver = true;
     move = 0;

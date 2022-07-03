@@ -5,6 +5,8 @@ import { backdropEl } from "./config";
 import { formElement } from "./config";
 import { newGameStarter } from "./game";
 import { selectGameField } from "./game";
+import { showCurrentSymbol } from "./game";
+import { hideCurrentSymbol } from "./game";
 
 const editFirstPlayer = document.getElementById("edit-player-1-btn");
 const editSecondPlayer = document.getElementById("edit-player-2-btn");
@@ -38,6 +40,10 @@ const eventListeners = () => {
     // tıklandığında fonksiyon çalışır
 
     LiElemet.addEventListener("click", selectGameField);
+    // dynamic hovering yapıyorum :)
+    LiElemet.addEventListener("mouseover", showCurrentSymbol);
+    LiElemet.addEventListener("mouseout", hideCurrentSymbol);
+    
   });
 };
 
